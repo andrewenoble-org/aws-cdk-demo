@@ -7,10 +7,13 @@ WORKDIR /home/project
 RUN apt-get update \
     && apt-get upgrade \
     && apt-get install -y \
+        curl \
         git \
         make \
         nano \
+        unzip \
         vim \
+        zip \
     && apt-get clean
 
 # install python packages
@@ -25,6 +28,23 @@ ENV PYTHONPATH .:/home/project
 
 # configure bash
 COPY assets/dockerfile/root/.bashrc /root/.bashrc
+
+# install AWS CLI v2
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip \
+    && ./aws/install
+RUN rm -r aws awscliv2.zip
+
+# install docker
+RUN curl -sSL https://get.docker.com/ | sh
+
+# install node and npm
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs \
+    && npm install -g npm@9.6.7 
+
+# install aws-cdk
+RUN npm install -g aws-cdk@2.81.0
 
 # enable jupyter access in browser
 ENTRYPOINT [ \

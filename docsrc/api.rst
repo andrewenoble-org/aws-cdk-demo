@@ -2,11 +2,11 @@
 API
 ###
 
-.. autoclass:: python_template.pet_sounds.PetSounds
+.. autoclass:: aws_cdk_demo.pet_sounds.PetSounds
 
 =====
 utils
 =====
 
-.. autoclass:: python_template.utils.yaml_handler.YAMLHandler
-.. autoclass:: python_template.utils.logger.Logger
+.. autoclass:: aws_cdk_demo.utils.yaml_handler.YAMLHandler
+.. autoclass:: aws_cdk_demo.utils.logger.Logger

@@ -15,8 +15,8 @@ extensions = [
 numfig = True
 
 # project details for docs
-project = "python_template"
-version = "0.0.7"
+project = "aws_cdk_demo"
+version = "0.0.0"
 license = "MIT"
 
 # insert path to source code

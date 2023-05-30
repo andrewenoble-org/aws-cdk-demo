@@ -1,0 +1,204 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "hello-constructs-stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "hello-constructs-stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "hello-constructs-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "hello-constructs-stack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/34db99adf82414a34b3fc9ea813abe352097e7bf384f9760f440d837df59344c.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "hello-constructs-stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "hello-constructs-stack.assets"
+      ],
+      "metadata": {
+        "/hello-constructs-stack/HelloHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandlerServiceRole11EF7C63"
+          }
+        ],
+        "/hello-constructs-stack/HelloHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandler2E4FBA4D"
+          }
+        ],
+        "/hello-constructs-stack/LambdaToDynamoDB/LambdaFunctionServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaToDynamoDBLambdaFunctionServiceRole65A176C7"
+          }
+        ],
+        "/hello-constructs-stack/LambdaToDynamoDB/LambdaFunctionServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaToDynamoDBLambdaFunctionServiceRoleDefaultPolicy15C1CCE7"
+          }
+        ],
+        "/hello-constructs-stack/LambdaToDynamoDB/LambdaFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaToDynamoDBLambdaFunctionBEB61136"
+          }
+        ],
+        "/hello-constructs-stack/LambdaToDynamoDB/DynamoTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "LambdaToDynamoDBDynamoTable53C1442D"
+            }
+          }
+        ],
+        "/hello-constructs-stack/LambdaToDynamoDB/DynamoTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaToDynamoDBDynamoTable53C1442D"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/ApiAccessLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaApiAccessLogGroupE2B41502"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiF114AB02"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiDeployment2DD5F1303a1d460ef21bca0c8a939e369724d997"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiDeploymentStageprod5DAE88D6"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiEndpoint9800D4B5"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiproxyA23CCA24"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/{proxy+}/ANY/ApiPermission.helloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AF.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiproxyANYApiPermissionhelloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AFANYproxy077BEAE0"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/{proxy+}/ANY/ApiPermission.Test.helloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AF.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiproxyANYApiPermissionTesthelloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AFANYproxy97DAB2A5"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiproxyANY6F82FBD9"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/ANY/ApiPermission.helloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AF.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiANYApiPermissionhelloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AFANYA5D0CD48"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/ANY/ApiPermission.Test.helloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AF.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiANYApiPermissionTesthelloconstructsstackApiGatewayToLambdaLambdaRestApiE22853AFANY20744276"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiANYBCB30DDA"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApi/UsagePlan/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiUsagePlanCD03FACA"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApiCloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiCloudWatchRole43F16710"
+          }
+        ],
+        "/hello-constructs-stack/ApiGatewayToLambda/LambdaRestApiAccount": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayToLambdaLambdaRestApiAccountF45E70A9"
+          }
+        ],
+        "/hello-constructs-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/hello-constructs-stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/hello-constructs-stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/hello-constructs-stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "hello-constructs-stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

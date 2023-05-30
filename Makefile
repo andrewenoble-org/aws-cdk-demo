@@ -25,12 +25,12 @@ help:
 .PHONY: build
 build:
 	@echo "Building docker image..."
-	docker build -t python-template .
+	docker build -t aws-cdk-demo .
 	@echo "Done!"
 
 .PHONY: exec
 exec:
-	docker exec -it python-template /bin/bash
+	docker exec -it aws-cdk-demo /bin/bash
 
 .PHONY: git-push-f
 git-push-f:
@@ -45,7 +45,7 @@ git-undo-d:
 .PHONY: rmi
 rmi:
 	@echo "Removing docker image..."
-	docker rmi python-template
+	docker rmi aws-cdk-demo
 	@echo "Done!"
 
 .PHONY: run
@@ -56,9 +56,9 @@ run:
 		-v `pwd`:/home/project \
 		--cpus=8 \
 		--memory=8g \
-		--name python-template \
+		--name aws-cdk-demo \
 		--ulimit nofile=1000000:1000000 \
-		python-template /bin/bash
+		aws-cdk-demo /bin/bash
 	@echo "Done!"
 
 .PHONY: test
@@ -73,5 +73,5 @@ test:
 .PHONY: stop
 stop:
 	@echo "Stopping docker container..."
-	docker stop python-template
+	docker stop aws-cdk-demo
 	@echo "Done!"

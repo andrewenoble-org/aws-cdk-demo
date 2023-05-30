@@ -15,22 +15,22 @@ All types of contributions are welcome!
 ## Code of Conduct
 
 This project and everyone participating in it is governed by a standard
-[Code of Conduct](https://github.com/andrewenoble-org/python-template/blob/main/.github/CODE_OF_CONDUCT.md).
+[Code of Conduct](https://github.com/andrewenoble-org/aws-cdk-demo/blob/main/.github/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable
 behavior to
-[andrew.e.noble@gmail.com](mailto:andrew.e.noble@gmail.com).
+[andrewenoble@gmail.com](mailto:andrewenoble@gmail.com).
 
 ## Asking a Question
 
 Please first check if current
-[GitHub Pages documentation](https://andrewenoble-org.github.io/python-template/)
+[GitHub Pages documentation](https://andrewenoble-org.github.io/aws-cdk-demo/)
 or Issues linked to existing
-[GitHub Projects](https://github.com/andrewenoble-org/python-template/projects)
+[GitHub Projects](https://github.com/andrewenoble-org/aws-cdk-demo/projects)
 address the question
 
 If you still have a question or would appreciate further clarification, please open a
 new
-[GitHub Issue](https://github.com/andrewenoble-org/python-template/issues/new)
+[GitHub Issue](https://github.com/andrewenoble-org/aws-cdk-demo/issues/new)
 and carefully fill out the template with all requested information.
 
 ## Contributing
@@ -42,20 +42,20 @@ make changes on a corresponding branch within your `VSCode` Development Environm
 and raise a GitHub Pull Request
 
 1. Check if current
-   [GitHub Pages documentation](https://andrewenoble-org.github.io/python-template/)
+   [GitHub Pages documentation](https://andrewenoble-org.github.io/aws-cdk-demo/)
    or Issues linked to an existing
-   [GitHub Project](https://github.com/andrewenoble-org/python-template/projects)
+   [GitHub Project](https://github.com/andrewenoble-org/aws-cdk-demo/projects)
    are relevant to your bug report, feature request, or suggested enhancement
 
 2. Open a new
-   [GitHub Issue](https://github.com/andrewenoble-org/python-template/issues/new)
+   [GitHub Issue](https://github.com/andrewenoble-org/aws-cdk-demo/issues/new)
    with name \<Issue-Short-Title\>
    and carefully fill out the template with all requested information
 
 3. Once the Issue is open, select a relevant
-   [GitHub Project](https://github.com/andrewenoble-org/python-template/projects),
+   [GitHub Project](https://github.com/andrewenoble-org/aws-cdk-demo/projects),
    select "Add item" on a view within that project, search for your Issue by typing
-   `#python-template` in the text box, and then add the Issue.  This automatically
+   `#aws-cdk-demo` in the text box, and then add the Issue.  This automatically
    generates an `<item-number>` for the Issue in the Project.  Modify the Issue
    title to `<PROJECT-ABBR>-<item-number>-<Issue-Short-Title>`,
    where `<PROJECT-ABBR>` should be a 2-4 capitalized abbreviation of
@@ -83,7 +83,7 @@ and raise a GitHub Pull Request
 
 6. Once your changes are made, all original and newly added tests pass locally, and
    `pre-commit run --all` runs without error, open a new
-   [GitHub Pull Request](https://github.com/andrewenoble-org/python-template/compare)
+   [GitHub Pull Request](https://github.com/andrewenoble-org/aws-cdk-demo/compare)
    with a push from your `VSCode` Development Environment
 
    ```bash
@@ -91,7 +91,7 @@ and raise a GitHub Pull Request
    ```
 
 7. Pull Requests trigger
-   [GitHub Actions](https://github.com/andrewenoble-org/python-template/actions),
+   [GitHub Actions](https://github.com/andrewenoble-org/aws-cdk-demo/actions),
    including
       * `pr-lint`: runs the [super-linter](https://github.com/github/super-linter).
       * `pr-pages-qc`: checks that `./docsrc/build` runs without error
@@ -107,7 +107,7 @@ and raise a GitHub Pull Request
    GitHub Pull-Request checklist and complete missing action-items
 
 9. Once all action-items are complete, request a review on GitHub.  At least one
-   review by one `python-template` owner is required
+   review by one `aws-cdk-demo` owner is required
 
 10. Once all conversation threads raised during review have been resolved, press
    `Squash and Merge` on GitHub to merge to `main`
@@ -119,7 +119,7 @@ and raise a GitHub Pull Request
 
 1. Enforce [PEP8](https://peps.python.org/pep-0008/) with
    [pre-commit](https://pre-commit.com/).  See
-   [pre-commit config file](https://github.com/andrewenoble-org/python-template/blob/main/.pre-commit-config.yaml)
+   [pre-commit config file](https://github.com/andrewenoble-org/aws-cdk-demo/blob/main/.pre-commit-config.yaml)
    for details
 
 2. Use [numpydoc](https://numpydoc.readthedocs.io/en/latest/index.html) docstring style
@@ -138,7 +138,7 @@ and raise a GitHub Pull Request
 2. Clone the repository
 
    ```bash
-   git clone https://github.com/andrewenoble-org/python-template.git
+   git clone https://github.com/andrewenoble-org/aws-cdk-demo.git
    ```
 
 3. Within the respository, build a Development Environment `Docker` image and deploy a

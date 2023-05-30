@@ -14,7 +14,7 @@ alias l='ls $LS_OPTIONS -lA'
 
 # Function to automate git config of email and username
 function git-config() {
-    git config --global user.email "andrew.e.noble@gmail.com"
+    git config --global user.email "andrewenoble@gmail.com"
     git config --global user.name "Andrew Noble"
 }
 

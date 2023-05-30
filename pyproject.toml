@@ -1,12 +1,12 @@
 [project]
-name = "python-template"
-version = "0.0.7"
+name = "aws-cdk-demo"
+version = "0.0.0"
 license = "MIT"
 authors = [
-    {name = "Andrew Noble", email = "andrew.e.noble@gmail.com"},
+    {name = "Andrew Noble", email = "andrewenoble@gmail.com"},
 ]
-description = "Python Template"
-repository = "https://github.com/andrewenoble-org/python-template"
+description = "Python template test"
+repository = "https://github.com/andrewenoble-org/aws-cdk-demo"
 readme = "README.rst"
 requires-python = "<3.11,>=3.9"
 classifiers = [
