@@ -1,6 +1,6 @@
 [project]
 name = "aws-cdk-demo"
-version = "0.0.0"
+version = "0.0.2"
 license = "MIT"
 authors = [
     {name = "Andrew Noble", email = "andrewenoble@gmail.com"},
