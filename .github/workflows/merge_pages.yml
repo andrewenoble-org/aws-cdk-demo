@@ -38,7 +38,7 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Build docs
-        run: ./docsrc/build
+        run: export DDB_TABLE_NAME=SolutionsConstructsHits && ./docsrc/build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
