@@ -2,11 +2,15 @@
 API
 ###
 
-.. autoclass:: aws_cdk_demo.pet_sounds.PetSounds
+======
+lambda
+======
 
-=====
-utils
-=====
+.. autofunction:: aws_cdk_demo.lambda.hello.handler
+.. autofunction:: aws_cdk_demo.lambda.hitcounter.handler
 
-.. autoclass:: aws_cdk_demo.utils.yaml_handler.YAMLHandler
-.. autoclass:: aws_cdk_demo.utils.logger.Logger
+======
+stacks
+======
+
+.. autoclass:: aws_cdk_demo.stacks.hello_constructs_stack.HelloConstructsStack
