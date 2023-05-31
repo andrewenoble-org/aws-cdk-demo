@@ -33,7 +33,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test with pytest
         run: |
-          pytest
+          cd aws_cdk_demo && pytest
       - name: Check that badge exists
         run: |
           cat assets/coverage/coverage.svg 1>/dev/null
