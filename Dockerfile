@@ -24,7 +24,7 @@ RUN /usr/local/bin/python -m pip install --upgrade pip \
 RUN rm requirements.txt
 
 # set python environment variable(s)
-ENV PYTHONPATH .:/home/project
+ENV PYTHONPATH .:/home/
 
 # configure bash
 COPY assets/dockerfile/root/.bashrc /root/.bashrc
@@ -45,6 +45,10 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
 
 # install aws-cdk
 RUN npm install -g aws-cdk@2.81.0
+
+# set custom path to aws config and credentials 
+ENV AWS_CONFIG_FILE /home/project/.aws/config
+ENV AWS_SHARED_CREDENTIALS_FILE /home/project/.aws/credentials
 
 # enable jupyter access in browser
 ENTRYPOINT [ \

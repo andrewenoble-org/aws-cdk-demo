@@ -9,6 +9,9 @@ assets/*
 # Assets exception
 !assets/.gitkeep
 
+# AWS CDK output folder
+cdk.out/
+
 # Byte-compiled
 __pycache__/
 
@@ -43,6 +46,7 @@ logs/*
 
 # Secrets
 secrets/*
+.aws
 
 # Secrets exception
 !secrets/.gitkeep
