@@ -41,16 +41,16 @@ RUN curl -sSL https://get.docker.com/ | sh
 # install node and npm
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g npm@9.6.7 
+    && npm install -g npm@9.6.7
 
 # install aws-cdk
 RUN npm install -g aws-cdk@2.81.0
 
-# set custom path to aws config and credentials 
+# set custom path to aws config and credentials
 ENV AWS_CONFIG_FILE /home/project/.aws/config
 ENV AWS_SHARED_CREDENTIALS_FILE /home/project/.aws/credentials
 
-# the following needs to be set so that sphinx can build the docs for 
+# the following needs to be set so that sphinx can build the docs for
 # aws_cdk_demo.lambda.hitcounter
 ENV DDB_TABLE_NAME SolutionsConstructsHits
 

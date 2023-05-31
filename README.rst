@@ -46,6 +46,9 @@ Overview
 
 A Dockerized development environment for building and deploying AWS CDK applications.
 
+.. warning::
+   Some steps below will create AWS resources that may bill your AWS account.
+
 ===
 WIP
 ===
@@ -71,48 +74,55 @@ Usage
    with :code:`python --version 3.9` or :code:`3.10`.  You may also need to
    :code:`pip install pyyaml`
 
-#. Within your working directory, clone the repository 
+#. Within your working directory, clone the repository
 
    .. code:: bash
 
       $ git clone https://github.com/andrewenoble-org/aws-cdk-demo.git
 
-#. Within the cloned repository, build a Development Environment :code:`Docker` image 
+#. Within the cloned repository, build a Development Environment :code:`Docker` image
    and deploy a Development Environment :code:`Docker` container
 
    ```bash
    make build && make run
    ```
 
-   Note: :code:`make run` may fail if another Docker container is using the 
-   :code:`8888` port on the host machine.  If so, edit the Makefile, changing 
+   Note: :code:`make run` may fail if another Docker container is using the
+   :code:`8888` port on the host machine.  If so, edit the Makefile, changing
    :code:`8888:8888` to :code:`8889:8888` or similar.
 
 #. Open :code:`VSCode`, install
    [Docker Extension](https://code.visualstudio.com/docs/containers/overview),
-   and follow the :code:`Docker Extension` instructions to Attach a :code:`VSCode` 
+   and follow the :code:`Docker Extension` instructions to Attach a :code:`VSCode`
    Window to your Docker container
 
-#. Click on the blue :code:`Open Folder` button, and navigate at the top of the 
-   :code:`VSCode` window to the :code:`/home/project` directory.  This is the 
+#. Click on the blue :code:`Open Folder` button, and navigate at the top of the
+   :code:`VSCode` window to the :code:`/home/project` directory.  This is the
    containerized Development Environment working directory
 
-#. Ensure that your :code:`.aws` folder containing :code:`config` and 
-   :code:`credentials` files is in the :code:`/home/project` working directory.  You 
+#. Ensure that your :code:`.aws` folder containing :code:`config` and
+   :code:`credentials` files is in the :code:`/home/project` working directory.  You
    can create the :code:`.aws` folder by running :code:`aws configure`
 
-#. Ensure that :code:`cdk bootstrap` has already been run for your chosen AWS Account and 
+#. Ensure that :code:`cdk bootstrap` has already been run for your chosen AWS Account and
    Region configuration.  If so, in the AWS Cloud Formation console, you should See
    the code:`CDKToolkit` stack.
 
-#. Open a :code:`VSCode` terminal, deploy the :code:`hello-constructs-stack` app to 
+#. Open a :code:`VSCode` terminal, deploy the :code:`hello-constructs-stack` app to
    your AWS account
 
    ```bash
-   cd aws_cdk_demo && cdk deploy
+   cd /home/project/aws_cdk_demo && cdk deploy
    ```
 
-#. See :code:`.github/CONTRIBUTING.md` for remaining steps in setting up the 
+#. To avoid unncessary AWS spend, when done experimenting with your deployment,
+   tear it down
+
+   ```bash
+   cd /home/project/aws_cdk_demo && cdk destroy
+   ```
+
+#. See :code:`.github/CONTRIBUTING.md` for remaining steps in setting up the
    recommended Development Environment
 
 .. note::
