@@ -5,7 +5,7 @@ license = "MIT"
 authors = [
     {name = "Andrew Noble", email = "andrewenoble@gmail.com"},
 ]
-description = "Python template test"
+description = "AWS CDK Demo"
 repository = "https://github.com/andrewenoble-org/aws-cdk-demo"
 readme = "README.rst"
 requires-python = "<3.11,>=3.9"

@@ -50,6 +50,10 @@ RUN npm install -g aws-cdk@2.81.0
 ENV AWS_CONFIG_FILE /home/project/.aws/config
 ENV AWS_SHARED_CREDENTIALS_FILE /home/project/.aws/credentials
 
+# the following needs to be set so that sphinx can build the docs for 
+# aws_cdk_demo.lambda.hitcounter
+ENV DDB_TABLE_NAME SolutionsConstructsHits
+
 # enable jupyter access in browser
 ENTRYPOINT [ \
       "jupyter", "lab", "--notebook-dir='/'", "--ip=0.0.0.0", "--port=8888", "-y", \

@@ -64,7 +64,7 @@ run:
 .PHONY: test
 test:
 	@echo "Running tests..."
-	pytest --cov --cov-report term-missing
+	cd /home/project/aws_cdk_demo && pytest --cov --cov-report term-missing
 	@echo "Creating badge..."
 	rm -f assets/coverage/coverage.svg
 	coverage-badge -o assets/coverage/coverage.svg
