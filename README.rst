@@ -83,9 +83,9 @@ Usage
 #. Within the cloned repository, build a Development Environment :code:`Docker` image
    and deploy a Development Environment :code:`Docker` container
 
-   ```bash
-   make build && make run
-   ```
+   .. code:: bash
+
+      $ make build && make run
 
    Note: :code:`make run` may fail if another Docker container is using the
    :code:`8888` port on the host machine.  If so, edit the Makefile, changing
@@ -111,16 +111,16 @@ Usage
 #. Open a :code:`VSCode` terminal, deploy the :code:`hello-constructs-stack` app to
    your AWS account
 
-   ```bash
-   cd /home/project/aws_cdk_demo && cdk deploy
-   ```
+   .. code:: bash
+
+      $ cd /home/project/aws_cdk_demo && cdk deploy
 
 #. To avoid unncessary AWS spend, when done experimenting with your deployment,
    tear it down
 
-   ```bash
-   cd /home/project/aws_cdk_demo && cdk destroy
-   ```
+   .. code:: bash
+
+      $ cd /home/project/aws_cdk_demo && cdk destroy
 
 #. See :code:`.github/CONTRIBUTING.md` for remaining steps in setting up the
    recommended Development Environment
